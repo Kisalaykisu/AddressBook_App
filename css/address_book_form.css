@@ -170,10 +170,14 @@ select {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* uc 4 */
 =======
 /* UC 4 */
 >>>>>>> Address_Book_Application_UC5
+=======
+/* UC 4 */
+>>>>>>> Address_Book_Application_UC6
 error-output {
   margin-left: 10px;
   font-size: 14px;
@@ -181,8 +185,11 @@ error-output {
   color: red;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> Address_Book_Application_UC4
 =======
+=======
+>>>>>>> Address_Book_Application_UC6
 
 /* UC 5 */
 .buttons-contact {
@@ -212,4 +219,7 @@ error-output {
 .button:hover{
   box-shadow: 0px 8px 15px rgba(77, 74, 74, 0.3);
 }
+<<<<<<< HEAD
 >>>>>>> Address_Book_Application_UC5
+=======
+>>>>>>> Address_Book_Application_UC6
