@@ -1,22 +1,6 @@
 const nameRegex = RegExp("^[A-Z]{1}[A-Za-z\\s]{2,}$");
 const phoneNumberRegex = RegExp("^[0-9]{2}\\s{1}[7-9]{1}[0-9]{9}$");
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-const addressRegex = RegExp('^[a-zA-Z0-9#,&]{4,}$');
-=======
 const addressRegex = RegExp('^[a-zA-Z0-9#,&\\s]{4,}$');
->>>>>>> Address_Book_Application_UC6
-=======
-const addressRegex = RegExp('^[a-zA-Z0-9#,&\\s]{4,}$');
->>>>>>> Address_Book_Application_UC7
-=======
-const addressRegex = RegExp('^[a-zA-Z0-9#,&\\s]{4,}$');
->>>>>>> Address_Book_Application_UC8
-=======
-const addressRegex = RegExp('^[a-zA-Z0-9#,&\\s]{4,}$');
->>>>>>> Address_Book_Application_UC9
 const zipRegex = RegExp("^[0-9]{3}\\s{0,1}[0-9]{3}$");
 
 class Contact {
@@ -87,19 +71,7 @@ class Contact {
   }
 
   toString(){
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      return `id ${this.id} \nName ${this.name} \nPhone Number ${this.phoneNumber} \nAddress ${this.address} \nCity ${this.city} \nState ${this.state} \nZip  ${this.zip}`;
-=======
       return `id: ${this.id} \nName: ${this.name} \nPhone Number: ${this.phoneNumber} \nAddress: ${this.address} \nCity: ${this.city} \nState: ${this.state} \nZip:  ${this.zip}`;
->>>>>>> Address_Book_Application_UC7
-=======
-      return `id: ${this.id} \nName: ${this.name} \nPhone Number: ${this.phoneNumber} \nAddress: ${this.address} \nCity: ${this.city} \nState: ${this.state} \nZip:  ${this.zip}`;
->>>>>>> Address_Book_Application_UC8
-=======
-      return `id: ${this.id} \nName: ${this.name} \nPhone Number: ${this.phoneNumber} \nAddress: ${this.address} \nCity: ${this.city} \nState: ${this.state} \nZip:  ${this.zip}`;
->>>>>>> Address_Book_Application_UC9
   }
 
 }
