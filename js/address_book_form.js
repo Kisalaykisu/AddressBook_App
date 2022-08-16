@@ -2,6 +2,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   
 =======
 
@@ -9,6 +10,8 @@ window.addEventListener("DOMContentLoaded", (event) => {
 =======
 =======
 >>>>>>> Address_Book_Application_UC8
+=======
+>>>>>>> Address_Book_Application_UC9
   validateName();
   validatePhoneNumber();
   validateAddress();
@@ -17,9 +20,12 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
 const validateName = () => {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> Address_Book_Application_UC7
 =======
 >>>>>>> Address_Book_Application_UC8
+=======
+>>>>>>> Address_Book_Application_UC9
   const name = document.querySelector("#name");
   name.addEventListener("input", function () {
     if (name.value.length == 0) {
@@ -35,6 +41,7 @@ const validateName = () => {
   });
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 };
@@ -46,6 +53,11 @@ const validatePhoneNumber = () => {
 
 const validatePhoneNumber = () => {
 >>>>>>> Address_Book_Application_UC8
+=======
+};
+
+const validatePhoneNumber = () => {
+>>>>>>> Address_Book_Application_UC9
   const phoneNumber = document.querySelector("#phoneNumber");
   phoneNumber.addEventListener("input", function () {
     if (phoneNumber.value.length == 0) {
@@ -61,6 +73,7 @@ const validatePhoneNumber = () => {
   });
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 };
@@ -72,6 +85,11 @@ const validateAddress = () => {
 
 const validateAddress = () => {
 >>>>>>> Address_Book_Application_UC8
+=======
+};
+
+const validateAddress = () => {
+>>>>>>> Address_Book_Application_UC9
   const address = document.querySelector("#address");
   address.addEventListener("input", function () {
     if (address.value.length == 0) {
@@ -87,6 +105,7 @@ const validateAddress = () => {
   });
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 };
@@ -98,6 +117,11 @@ const validateZipcode = () => {
 
 const validateZipcode = () => {
 >>>>>>> Address_Book_Application_UC8
+=======
+};
+
+const validateZipcode = () => {
+>>>>>>> Address_Book_Application_UC9
   const zip = document.querySelector("#zip");
   zip.addEventListener("input", function () {
     if (zip.value.length == 0) {
@@ -111,6 +135,7 @@ const validateZipcode = () => {
       setTextValue(".zip-error", error);
     }
   });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -129,6 +154,8 @@ function save() {
 const save = () => {
 >>>>>>> Address_Book_Application_UC7
 =======
+=======
+>>>>>>> Address_Book_Application_UC9
 };
 
 const save = () => {
@@ -153,7 +180,10 @@ const createAndUpdateStorage = (contact) => {
 }
 
 const createContact = () => {
+<<<<<<< HEAD
 >>>>>>> Address_Book_Application_UC8
+=======
+>>>>>>> Address_Book_Application_UC9
   let contact = new Contact();
   contact.id = new Date().getTime();
 
@@ -178,10 +208,14 @@ const createContact = () => {
     throw error;
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
   
 =======
 
 >>>>>>> Address_Book_Application_UC8
+=======
+
+>>>>>>> Address_Book_Application_UC9
   let city = getInputValueById("#city");
   if (city != "Select City") {
     contact.city = city;
@@ -205,6 +239,7 @@ const createContact = () => {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   console.log(contact.toString());
 }
 =======
@@ -216,12 +251,36 @@ const createContact = () => {
   return contact;
 }
 >>>>>>> Address_Book_Application_UC8
+=======
+  alert(contact.toString());
+  return contact;
+};
+
+const resetForm = () => {
+  setValue("#name", "");
+  setValue("#phoneNumber", "");
+  setValue("#address", "");
+  setSelectedIndex('#city', 0);
+  setSelectedIndex('#state', 0);
+  setValue("#zip", "");
+  setTextValue(".name-error", "");
+  setTextValue(".tel-error", "");
+  setTextValue(".address-error", "");
+  setTextValue(".zip-error", "");
+};
+
+const setValue = (id, value) => {
+  const element = document.querySelector(id);
+  element.value = value;
+};
+>>>>>>> Address_Book_Application_UC9
 
 const setTextValue = (id, value) => {
   const element = document.querySelector(id);
   element.textContent = value;
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 function getInputValueById(property) {
@@ -241,3 +300,14 @@ const getInputValueById = (property) => {
   return value;
 };
 >>>>>>> Address_Book_Application_UC8
+=======
+const setSelectedIndex = (id, index) => {
+  const element = document.querySelector(id);
+  element.selectedIndex = index;
+};
+
+const getInputValueById = (property) => {
+  let value = document.querySelector(property).value;
+  return value;
+};
+>>>>>>> Address_Book_Application_UC9
