@@ -1,9 +1,19 @@
 window.addEventListener("DOMContentLoaded", (event) => {
 <<<<<<< HEAD
+<<<<<<< HEAD
   
 =======
 
 >>>>>>> Address_Book_Application_UC6
+=======
+  validateName();
+  validatePhoneNumber();
+  validateAddress();
+  validateZipcode();
+});
+
+const validateName = () => {
+>>>>>>> Address_Book_Application_UC7
   const name = document.querySelector("#name");
   name.addEventListener("input", function () {
     if (name.value.length == 0) {
@@ -17,7 +27,13 @@ window.addEventListener("DOMContentLoaded", (event) => {
       setTextValue(".name-error", error);
     }
   });
+<<<<<<< HEAD
 
+=======
+};
+
+const validatePhoneNumber = () => {
+>>>>>>> Address_Book_Application_UC7
   const phoneNumber = document.querySelector("#phoneNumber");
   phoneNumber.addEventListener("input", function () {
     if (phoneNumber.value.length == 0) {
@@ -31,7 +47,13 @@ window.addEventListener("DOMContentLoaded", (event) => {
       setTextValue(".tel-error", error);
     }
   });
+<<<<<<< HEAD
 
+=======
+};
+
+const validateAddress = () => {
+>>>>>>> Address_Book_Application_UC7
   const address = document.querySelector("#address");
   address.addEventListener("input", function () {
     if (address.value.length == 0) {
@@ -45,7 +67,13 @@ window.addEventListener("DOMContentLoaded", (event) => {
       setTextValue(".address-error", error);
     }
   });
+<<<<<<< HEAD
 
+=======
+};
+
+const validateZipcode = () => {
+>>>>>>> Address_Book_Application_UC7
   const zip = document.querySelector("#zip");
   zip.addEventListener("input", function () {
     if (zip.value.length == 0) {
@@ -59,6 +87,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
       setTextValue(".zip-error", error);
     }
   });
+<<<<<<< HEAD
 
 });
 
@@ -69,6 +98,11 @@ const setTextValue = (id, value) => {
 };
 =======
 function save() {
+=======
+};
+
+const save = () => {
+>>>>>>> Address_Book_Application_UC7
   let contact = new Contact();
   contact.id = new Date().getTime();
 
@@ -114,16 +148,28 @@ function save() {
     throw error;
   }
 
+<<<<<<< HEAD
   console.log(contact.toString());
 }
+=======
+  alert(contact.toString());
+};
+>>>>>>> Address_Book_Application_UC7
 
 const setTextValue = (id, value) => {
   const element = document.querySelector(id);
   element.textContent = value;
 };
 
+<<<<<<< HEAD
 function getInputValueById(property) {
   let value = document.querySelector(property).value;
   return value;
 }
 >>>>>>> Address_Book_Application_UC6
+=======
+const getInputValueById = (property) => {
+  let value = document.querySelector(property).value;
+  return value;
+};
+>>>>>>> Address_Book_Application_UC7
