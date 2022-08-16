@@ -1,11 +1,14 @@
 window.addEventListener("DOMContentLoaded", (event) => {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   
 =======
 
 >>>>>>> Address_Book_Application_UC6
 =======
+=======
+>>>>>>> Address_Book_Application_UC8
   validateName();
   validatePhoneNumber();
   validateAddress();
@@ -13,7 +16,10 @@ window.addEventListener("DOMContentLoaded", (event) => {
 });
 
 const validateName = () => {
+<<<<<<< HEAD
 >>>>>>> Address_Book_Application_UC7
+=======
+>>>>>>> Address_Book_Application_UC8
   const name = document.querySelector("#name");
   name.addEventListener("input", function () {
     if (name.value.length == 0) {
@@ -28,12 +34,18 @@ const validateName = () => {
     }
   });
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 };
 
 const validatePhoneNumber = () => {
 >>>>>>> Address_Book_Application_UC7
+=======
+};
+
+const validatePhoneNumber = () => {
+>>>>>>> Address_Book_Application_UC8
   const phoneNumber = document.querySelector("#phoneNumber");
   phoneNumber.addEventListener("input", function () {
     if (phoneNumber.value.length == 0) {
@@ -48,12 +60,18 @@ const validatePhoneNumber = () => {
     }
   });
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 };
 
 const validateAddress = () => {
 >>>>>>> Address_Book_Application_UC7
+=======
+};
+
+const validateAddress = () => {
+>>>>>>> Address_Book_Application_UC8
   const address = document.querySelector("#address");
   address.addEventListener("input", function () {
     if (address.value.length == 0) {
@@ -68,12 +86,18 @@ const validateAddress = () => {
     }
   });
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 };
 
 const validateZipcode = () => {
 >>>>>>> Address_Book_Application_UC7
+=======
+};
+
+const validateZipcode = () => {
+>>>>>>> Address_Book_Application_UC8
   const zip = document.querySelector("#zip");
   zip.addEventListener("input", function () {
     if (zip.value.length == 0) {
@@ -87,6 +111,7 @@ const validateZipcode = () => {
       setTextValue(".zip-error", error);
     }
   });
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 });
@@ -103,6 +128,32 @@ function save() {
 
 const save = () => {
 >>>>>>> Address_Book_Application_UC7
+=======
+};
+
+const save = () => {
+  try {
+    let contact = createContact();
+    createAndUpdateStorage(contact);
+  } catch (error) {
+    alert(error);
+  }
+};
+
+const createAndUpdateStorage = (contact) => {
+  let contactList = JSON.parse(localStorage.getItem("ContactList"));
+  if (contactList != undefined) {
+    contactList.push(contact);
+  } else {
+    contactList = [contact];
+  }
+  alert(contact.toString());
+  alert("Contact Added Sucessfully");
+  localStorage.setItem("ContactList", JSON.stringify(contactList));
+}
+
+const createContact = () => {
+>>>>>>> Address_Book_Application_UC8
   let contact = new Contact();
   contact.id = new Date().getTime();
 
@@ -126,7 +177,11 @@ const save = () => {
     setTextValue(".address-error", error);
     throw error;
   }
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> Address_Book_Application_UC8
   let city = getInputValueById("#city");
   if (city != "Select City") {
     contact.city = city;
@@ -149,18 +204,25 @@ const save = () => {
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   console.log(contact.toString());
 }
 =======
   alert(contact.toString());
 };
 >>>>>>> Address_Book_Application_UC7
+=======
+  alert(contact.toString());
+  return contact;
+}
+>>>>>>> Address_Book_Application_UC8
 
 const setTextValue = (id, value) => {
   const element = document.querySelector(id);
   element.textContent = value;
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 function getInputValueById(property) {
   let value = document.querySelector(property).value;
@@ -173,3 +235,9 @@ const getInputValueById = (property) => {
   return value;
 };
 >>>>>>> Address_Book_Application_UC7
+=======
+const getInputValueById = (property) => {
+  let value = document.querySelector(property).value;
+  return value;
+};
+>>>>>>> Address_Book_Application_UC8
